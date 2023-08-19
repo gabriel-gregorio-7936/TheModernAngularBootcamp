@@ -1,0 +1,29 @@
+54. Pipes overview
+pipes are functions that format data for use in a template
+only used in a template
+some pipes are built into angular
+we can build our own pipes easily
+you don't have to use pipes, but they are recommended
+
+angular.io/api?type=pipe
+// documentation about the pipes
+
+to use pipes in angular, use the below syntax:
+{{ name | title }} // the | symbol defines the pipe
+
+
+
+{{ height | number: '1.0-0' }}
+// 1 means that the browser has to render at least 1 character
+// 0-0 means that the browser has to render at least 0 characters and at most 0 characters
+
+
+you can use pipes anywhere inside the template
+
+
+
+<div *ngIf="(miles | convert: 'km') > 10">
+        {{ miles | convert: 'm' }}
+</div>
+
+// these lines of code hide the div of miles if <= 10

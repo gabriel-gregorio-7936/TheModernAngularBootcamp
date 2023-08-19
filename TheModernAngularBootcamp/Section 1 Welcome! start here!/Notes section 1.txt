@@ -1,0 +1,20 @@
+
+
+https://discord.gg/vvcyvjDkdC
+
+
+5. A few questions answered
+
+name			type				purpose
+app.component.html	component template		contains the html that gets displayed to a user
+app.component.ts	component class			contains code to run when important events occur (like when a user clicks a button)
+translate.service.ts	service				contains code that fetches/stores/update data
+app.module.ts		module				defines a set of services + components that handle all the functionality for a part of our app
+
+
+8. Environment setup - vs code
+
+npm install -g @angular/cli
+// this installs the angular cli globally
+
+Note #2: You can optionally choose to install the VSCode Extension called Angular Language Service.

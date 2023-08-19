@@ -1,0 +1,22 @@
+
+directives can be used to modify the structure or properties of HTML elements
+used only in a template
+some built into angular
+we can build our own too
+
+
+
+[ngClass]="{ active: i === currentPage }"
+if the boolean expression evaluates to true, the active name is put inside the class property
+
+
+
+Obs:
+@Input('appClass') set backgroundColor(color: string) {
+    this.element.nativeElement.style.backgroundColor = color;
+  }
+// this is a block of code called directive
+// it allows us to implement funcionalities to css properties
+
+ng generate directive times
+// this command generates a new directive called times

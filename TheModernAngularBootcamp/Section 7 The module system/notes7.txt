@@ -1,0 +1,18 @@
+ng new comps --routing
+// the --routing tells angular to build an application with routing enabled
+
+
+https://medium.com/dev-jam/5-tips-best-practices-to-organize-your-angular-project-e900db08702e
+
+
+
+ng g m Mods --routing
+ng generate modules Mods --routing
+// this command generates a module named Mods with routing enabled
+
+
+ng generate component elements/ElementsHome
+
+difference between components, modules, pipes, directives, etc
+
+https://semantic-ui.com/

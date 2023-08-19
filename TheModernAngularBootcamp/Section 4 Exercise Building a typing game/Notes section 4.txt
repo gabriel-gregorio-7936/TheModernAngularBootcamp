@@ -1,0 +1,55 @@
+IMPORTANT Info About Faker Installation
+In the upcoming lecture, we will be installing the Faker library. You may notice that the Github repository for Faker is empty or is displaying some confusing messaging. The library currently no longer exists and is not being maintained. However, as of today, it still exists in the NPM registry and we are able to install and use it in our projects by specifying the last known good version.
+
+Please do the following prior to starting the next lecture:
+
+npm install faker@5.5.3
+
+npm install @types/faker@5.5.9
+
+A community fork of Faker was made to save the project and they are actively working on some fixes and a fresh v6 release:
+
+https://github.com/faker-js/faker
+
+If you wish to use this library instead, you can install it by running:
+
+npm install @faker-js/faker
+
+You'll then need to update your imports:
+
+import { faker } from "@faker-js/faker";
+
+As of their v6 release, TS support is now native and does not require installing the @types declarations.
+
+https://github.com/faker-js/faker#typescript-support
+
+
+
+
+
+Hi,
+
+
+
+You might have come across this error in Section 2 Video 18, where the exact same issue might arise if you follow the method shown in the video. You can also find some answers in the Q&A section there already.
+
+
+
+The issue is that TypeScript cannot know if   $event.target.value  is null or not. A solution would be to pass the whole $event object to your onInput() method and let it extract what it needs. However, according to Angular documentation, this is considered to be a "ducious practice" and should be avoided (separation of concerns).
+
+
+
+A better solution is to use a template reference variable. You can read more about it in the Angular documentation. (Cannot post a direct link unfortunately)
+
+
+
+In this case, a working solution could look like this:
+
+<input #userInput class="input" (input)="onInput(userInput.value)"/>
+
+
+Hope that helps!
+
+
+<span *ngFor="let letter of randomText.split(");let i = index;">
+</span>

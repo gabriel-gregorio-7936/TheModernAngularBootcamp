@@ -1,0 +1,44 @@
+27. App overview
+
+
+28. Project setup
+
+
+29. A quick HTML dump
+
+
+
+30. adding static files to angular
+
+
+33. Creating components
+
+ng generate component <name>
+ng generate component dropdown
+
+
+38. Communicating from Parent to child
+
+import { Component, Input } from '@angular/core';
+
+  @Input() title = '';
+  @Input() imageUrl = '';
+  @Input() username = '';
+  @Input() content = '';
+
+// you have to put these codes inside the .component.ts file
+
+
+40. Building lists with *ngFor
+
+you can create a forEach loop with the property *ngFor="let post of posts"
+then you can access the variable post which is an element of posts array
+
+
+
+42. Host element selectors
+
+when you want to change the css of the host file, you need to use:
+:host {
+	// properties
+}

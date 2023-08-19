@@ -1,0 +1,77 @@
+9. Project overview
+
+ng new pw
+// creates a new angular project called pw
+
+
+10. Starting and stopping an angular project
+
+npm start
+ng serve
+
+
+12. Event binding syntax
+// You put parentheses inside the tag every time you want angular to watch to some kind of event to occur with the element
+// Inside the parentheses goes the name of the event to be listened to
+(click)="onButtonClick()"
+// Inside the quotes goes the name of the function to be executed
+
+
+13. Property binding syntax
+<input [value]="password" />
+// value is the name of the property we want to set
+// password is the name of the variable inside a component class file
+
+
+// to disable the incompatibility between "" and ''
+As far as angular is concerned, both are the same. It might be that the tslint that comes along with the same might suggest one over the other.  In tslint.json, there is an option to turn that off.
+
+"quotemark": [false]
+
+14. Interpolation syntax
+event binding: (content)=""
+property binding: [content]=""
+interpolation syntax: {{ functionName() or variableName }}
+
+16. Tracking input state
+(change)="onChangeUseLetters()"
+// listening for change event
+
+17. Tracking additional properties
+// for multiline strings to be printed, use `` inside console.log
+
+
+18. handling text input
+
+(input)="onChangeLength($event.target.value)"
+
+onChangeLength(value: string) {
+    const parsedValue = parseInt(value);
+
+    if (!isNaN(parsedValue)) {
+      this.length = parsedValue;
+    }
+  }
+
+21. Adding third party css
+npm install bulma
+
+
+22. CSS import statements
+
+@import 'bulma/css/bulma.css';
+you have to specify the path as though you are inside node_modules folder
+
+
+24. Structural directives
+
+name				purpose					example
+structural directives		adds or removes HTML elements		<div *ngIf="length"> <p>Hidden if length is false</p> </div>
+attribute directives		changes the properties of the html	<label appStrikethrough> <input type="checkbox" /> Use letters </label>
+				element it gets applied to		
+
+
+25. deploying angular apps
+// npm install -g now
+// installs the cli for deploying angular apps
+

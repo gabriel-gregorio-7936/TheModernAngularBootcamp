@@ -1,0 +1,5 @@
+npm start
+ng serve
+
+ng generate component card
+// being card the name of the component to be created
